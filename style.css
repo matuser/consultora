@@ -430,35 +430,54 @@ ul li:hover ul.dropdown {
   opacity: .8;
 }
 
-.footer{
-  width:100%;
+.footer {
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding: 50px 100px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding:1rem 2rem;
+  justify-content: space-between; /* Ajusta el contenido a los extremos */
+  padding: 1rem 2rem;
   margin-top: 1rem;
-  background:var(--color);
+  background: var(--color);
 }
 
-.footer h1{
-  color:#fff;
+.footer-left {
+  flex: 1;
+}
+
+.footer-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Alinea el contenido a la derecha */
+}
+
+.footer h1 {
+  color: #fff;
   letter-spacing: .1rem;
   font-weight: 400;
-  text-align: center;
+  text-align: left;
 }
 
-.footer .credit {
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.contact-item i {
+  margin-right: 0.5rem;
+  color: #fff; /* Color de los íconos */
+}
+
+.contact-item h2 {
+  color: #fff; /* Color del texto */
+  font-size: 1.2rem; /* Ajusta el tamaño del texto */
   margin: 0;
 }
 
-.footer span a{
-  color: yellow;
-}
-.footer .icons a{
-  color:#fff;
-  font-size: 1.8rem;
-  padding:0 1rem;
-}
 
 @media (max-width:768px){
 
@@ -698,9 +717,92 @@ h1.heading {
   transform: rotateY(180deg);
 }
 
-.container .box-container .box img{
-  height: 80px;
+.container .box-container .box img {
+  height: 80%; /* Ocupa el 100% de la altura de la tarjeta */
+  width: 80%;  /* Ocupa el 100% del ancho de la tarjeta */
+  object-fit: cover; /* Mantiene la proporción de la imagen y la ajusta */
 }
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 300px;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card img {
+  width: 80%;
+  height: auto;
+}
+
+.card h2 {
+  font-size: 1.5em;
+  margin: 16px 0;
+}
+
+.card hr {
+  border: none;
+  height: 2px;
+  background-color: #0078D4; /* Cambia este color según tu preferencia */
+  width: 80%;
+  margin: 10px auto;
+}
+
+.card p {
+  font-size: 1em;
+  margin: 16px;
+  color: #333;
+}
+
+/* Para asegurar que las tarjetas mantengan el tamaño del contenido */
+.container .box-container .box {
+  height: auto; /* Ajusta automáticamente al contenido */
+  width: auto;  /* Ajusta automáticamente al contenido */
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 300px;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card h2 {
+  font-size: 1.5em;
+  margin: 16px 0;
+}
+
+.card hr {
+  border: none;
+  height: 2px;
+  background-color: #0078D4; /* Cambia este color según tu preferencia */
+  width: 80%;
+  margin: 10px auto;
+}
+
+.card p {
+  font-size: 1em;
+  margin: 16px;
+  color: #333;
+}
+
+/* Para asegurar que las tarjetas mantengan el tamaño del contenido */
+.container .box-container .box {
+  height: auto; /* Ajusta automáticamente al contenido */
+  width: auto;  /* Ajusta automáticamente al contenido */
+}
+
 
 .container .box-container .box h3{
   color:#444;
@@ -793,4 +895,20 @@ h1.heading {
 
 .box-back {
   transform: rotateY(180deg);
+}
+
+.grey-line hr {
+  background-color: #6c757d; /* Gris */
+}
+
+.blue-line hr {
+  background-color: #0078D4; /* Azul */
+}
+
+.orange-line hr {
+  background-color: #fd7e14; /* Naranja */
+}
+
+.yellow-line hr {
+  background-color: #ffc107; /* Amarillo */
 }
